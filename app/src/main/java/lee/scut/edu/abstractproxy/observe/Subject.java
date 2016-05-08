@@ -11,9 +11,9 @@ public abstract class Subject {
     public void addListener(Listener listener){
         mListeners.add(listener);
     }
-    public void notifyAllListener(){
+    protected void notifyAllListener(){
         for (Listener listener : mListeners) {
-            listener.onReady();
+            listener.onFinished();
         }
     }
 }
